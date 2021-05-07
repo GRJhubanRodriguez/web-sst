@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import {AccidentalidadComponent} from './Input/accidentalidad/accidentalidad.component';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
