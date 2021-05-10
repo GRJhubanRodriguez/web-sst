@@ -1,0 +1,92 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+.CajaLogin{
+    background-color: rgba(255, 255, 255, 0.671);
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+    width: 420px;
+    height: 420px;
+    padding: 70px 30px;
+    top: 20%;
+    left: 33%;
+    position: absolute;
+    transform: rotate(-50%, -50%);
+    box-sizing:border-box;    
+}
+
+.CajaLogin .logo{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+.CajaLogin h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+.CajaLogin label{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+}
+.CajaLogin input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.CajaLogin input[type="text"],
+.CajaLogin input[type="password"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    font-size: 20px;
+}
+.CajaLogin input[type="submit"]{
+    padding: 12px 24px;
+    opacity: 1;
+    color: white;
+    background-color: hsl(243, 90%, 12%);
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+.CajaLogin input[type="submit"]:hover {
+    border: transparent;
+    background: hsla(216, 84%, 54%, 0.932);
+    color: hsl(243, 90%, 12%);
+    font-size: 20px;
+    border-radius: 26px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s cubic-bezier(1,.15,.34,.92)
+}
+
+@media (max-width: 414px) and (orientation: portrait){
+    .CajaLogin{
+        top: 20%;
+        left: 0%;   
+    }
+}
+@media (max-width: 823px) and (orientation: landscape){
+    .CajaLogin{
+        top: 10%;
+        left: 20%;   
+    }
+}
+
+@media (min-width: 768px) and (orientation: portrait){
+    .CajaLogin{
+        top: 20%;
+        left: 22%;   
+    }
+}

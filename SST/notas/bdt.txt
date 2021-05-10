@@ -1,0 +1,22 @@
+/* 2021-04-27 16:07:23 [118 ms] */ CREATE TABLE Accidents(       id int NOT NULL primary key AUTO_INCREMENT comment 'primary key',     create_time DATETIME COMMENT 'create time',     update_time DATETIME COMMENT 'update time',     SiglaEmpresa varchar(7) NOT NULL,     SiglaSede varchar(7) NOT NULL,     NombreEmpresa varchar(255),     TipoIdentificacion varchar(20),     Identificacion int(50) NOT NULL,     Genero varchar(20) NOT NULL,     Nombre varchar(255) NOT NULL,     TipoContrato varchar(50) NOT NULL,     FechaAT Date NOT NULL,     HoraAT Time NOT NULL,     AreaTrabajo varchar(255),     NombreAreaTrabajo varchar(255),     OficioHabitual varchar(255),     TareaAT varchar(255),     DiasIncapacidad int(3),     ParteCuerpo varchar(255),     NaturalezaLesion varchar(255),     AgenteLesion varchar(255),     TipoAT varchar(255),     Peligro varchar(255),     OrigenAT varchar(255),     CausaAT varchar(255),     ATgrave varchar(255),     FechaReporteARL Date,     DescripcionAT varchar(255),     Observaciones varchar(255),     ATInvestigado varchar(255),     PlanPropuesto int(3),     PlanEjecutado int(3),     CierrePlan varchar(255),     Furat varchar(255),     FormatoInvestigacion varchar(255),     VersionAccidentado varchar(255),     VersionTestigos varchar(255),     AnalisisCausa varchar(255),     EvidenciaFotografica varchar(255),     LeccionAprendida varchar(255),     DivulgacionLeccionAprendida varchar(255) ) default charset utf8 comment ''
+/* 2021-04-27 16:34:35 [36 ms] */ ALTER TABLE 	accidents CHANGE id id int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1 comment 'primary key'
+/* 2021-04-27 16:36:48 [42 ms] */ ALTER TABLE accidents  	MODIFY id int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1
+
+CREATE DATABASE database_SST;
+USE database_SST;
+CREATE TABLE users(
+	id int(11) NOT NULL,
+    username VARCHAR(20) NOT NULL,
+    password VARCHAR(60) NOT NULL,
+    enterprise VARCHAR(7) NOT NULL
+);
+ALTER TABLE users
+	ADD PRIMARY KEY (id);
+ALTER TABLE users
+	MODIFY id int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 2;
+DESCRIBE users;
+DESCRIBE accidents;
+ALTER TABLE accidents
+    ADD COLUMN user_id int(11),
+	ADD CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES users(id);
+    
