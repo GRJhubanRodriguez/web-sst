@@ -4,15 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AccidentalidadComponent } from './Input/accidentalidad/accidentalidad.component';
-import { NavComponent } from './nav/nav.component';
+import { NavComponent } from './nav/nav/nav.component';
 import { LoginComponent } from './login/login.component';
+import { MenuComponent } from './nav/menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AccidentalidadComponent,
     NavComponent,
-    LoginComponent
+    LoginComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

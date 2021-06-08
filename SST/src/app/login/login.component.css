@@ -15,7 +15,8 @@ body{
     left: 33%;
     position: absolute;
     transform: rotate(-50%, -50%);
-    box-sizing:border-box;    
+    box-sizing:border-box; 
+    border-radius: 5%;   
 }
 
 .CajaLogin .logo{
@@ -55,20 +56,21 @@ body{
     padding: 12px 24px;
     opacity: 1;
     color: white;
-    background-color: hsl(243, 90%, 12%);
+    background-color: rgba(9, 2, 41, 0.774);
     border-radius: 20px;
     font-size: 15px;
 }
 
 .CajaLogin input[type="submit"]:hover {
     border: transparent;
-    background: hsla(216, 84%, 54%, 0.932);
-    color: hsl(243, 90%, 12%);
+    background: rgba(20, 94, 155, 0.897);
+    color: rgb(252, 252, 252);
     font-size: 20px;
     border-radius: 26px;
     position: relative;
     overflow: hidden;
-    transition: all 0.2s cubic-bezier(1,.15,.34,.92)
+    transition: all 0.2s cubic-bezier(1,.15,.34,.92);
+    cursor: pointer;
 }
 
 @media (max-width: 414px) and (orientation: portrait){

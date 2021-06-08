@@ -38,7 +38,7 @@
    margin: 1.5%;
    padding: 3.5%;
    list-style-type: none;
-   background-color: rgba(15, 16, 54, 0.842);
+   background-color: rgba(9, 2, 41, 0.774);
    border-radius: 5%;
    font-size: large;
    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.952);   
@@ -76,13 +76,15 @@
     background-color:rgba(15, 16, 54, 0.842);
     border-radius: 5%;
     padding: 0.6% 0.5%;
+    cursor: pointer;
 }
 .menu{
   margin: 2% 0%;
   font-size: large;
-  background-color:rgba(15, 16, 54, 0.842);
+  background-color:rgba(9, 2, 41, 0.774);
   border-radius: 5%;
   padding: 0.6% 0.5%;
+  cursor: pointer;
 }
 
 
