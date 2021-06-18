@@ -1,0 +1,118 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    background-color: rgba(15, 11, 11, 0.493);
+}
+.Contenedor{
+    margin: 10% 1% 10% 1%;
+    padding: 2%;
+    display: grid;
+}
+.ContenedorSub{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border-radius: 0px 0px 10px 10px;
+    padding: 10px;
+    background-color: rgba(211, 211, 211, 0.863);
+}
+button{
+    margin: 3% 0% 2% 0%;
+    padding: 0.5%;
+    width: 150px;
+    background-color: rgba(14, 4, 66, 0.863);
+    color: hsla(0, 0%, 96%, 0.94);
+    font-size: 20pt;
+}
+button:hover{  
+    color: rgb(13, 2, 65);
+    background-color: rgba(248, 248, 248, 0.795);
+    width: 200px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+h1{
+    color: hsl(0, 0%, 100%);
+}
+h2{
+    margin-top: 5%;
+    margin-bottom: 0%;
+    padding-left: 20px;
+    color: hsla(0, 0%, 96%, 0.94);
+    background-color: rgba(14, 4, 66, 0.863);
+}
+label{
+    width: 200px;
+    margin: 2% 0.5% 2% 2%;
+    padding: 1%;
+}
+input{
+    width: 200px;
+    margin: 1% 1% 1% 0.2%;
+    padding: 1%;
+}
+input[type=Text]{
+    width: 200px;
+    border: 1px dotted rgb(26, 18, 68);
+    border-radius: 10px;
+    -webkit-appearance: none;
+}
+input[type=Number]{
+    width: 200px;
+    border: 1px dotted rgb(26, 18, 68);
+    border-radius: 10px;
+    -webkit-appearance: none;
+}
+input[type=Datetime]{
+    width: 200px;
+    border: 1px dotted rgb(26, 18, 68);
+    border-radius: 10px;
+    -webkit-appearance: none;
+}
+select{
+    width: 208px;
+    margin: 2% 2% 2% 0.2%;
+    padding: 1%;
+    border: 1px dotted rgb(26, 18, 68);
+    border-radius: 10px;
+    -webkit-appearance: none;
+}
+textarea{
+    width: 200px;
+    margin: 2% 2% 2% 0.2%;
+    padding: 1%;
+    border: 1px dotted rgb(26, 18, 68);
+    border-radius: 10px;
+    -webkit-appearance: none;
+}
+
+@media screen and (max-width: 800px){
+    body{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .ContenedorSub{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border-radius: 0px 0px 10px 10px;
+        padding: 10px;
+        background-color: rgba(211, 211, 211, 0.863);
+    }
+}
+
+@media screen and (max-width: 375px){
+    .Contenedor{
+        margin-top: 20%;
+    }
+    .ContenedorSub{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        border-radius: 0px 0px 10px 10px;
+        padding: 10px;
+        background-color: rgba(211, 211, 211, 0.863);
+    }
+    
+}
