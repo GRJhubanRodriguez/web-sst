@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Accidentalidad</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <script>
+        function pulsar() {
+            Alert("Información registrada");
+            console.log("Información registrada");
+        }
+    </script>
+
+</head>
+<body>
+    <div> <app-nav></app-nav> </div>
+    <form class="Contenedor">
+        <div>
+            <h1><strong>Reporte de accidentalidad</strong></h1>
+            <h2>Información personal</h2>
+            <div class="ContenedorSub">
+                <label>Tipo de identificación</label><select name="TipoId" id="TipoId">
+                    <option value="0">Seleccione</option>
+                    <option value="1">Cedula</option>
+                    <option value="2">Cedula de extranjería</option>
+                    <option value="3">Pasaporte</option>
+                    <option value="4">Permiso de trabajo</option>
+                </select>
+                <label>Número de identificación</label><input type="number" name="NumeroId" id="NumeroId">
+                <label>Genero</label><select name="Genero" id="Genero">
+                    <option value="0">Seleccione</option>
+                    <option value="1">Femenino</option>
+                    <option value="2">Masculino</option>
+                </select>
+                <label>Nombre del trabajador</label><input type="text" name="Nombre" id="Nombre">
+                <label>Tipo de contrato</label><select name="Contrato" id="Contrato">
+                    <option value="0">Seleccione</option>
+                    <option value="1">Directo</option>
+                    <option value="2">Empresa temporal</option>
+                    <option value="3">Contratista</option>
+                </select>
+            </div>
+        </div>
+        
+        <h2>Identificación del accidente</h2>
+        <div class="ContenedorSub">
+                <label>Fecha del accidente</label><input type="datetime" name="FechaAccidente" id="FechaAccidente">
+                <label>Hora del accidente</label><input type="datetime" name="HoraAccidente" id="HoraAccidente">
+                <label>Area de trabajo</label><select name="Area" id="Area">
+                    <option value=0>Seleccione</option>
+                    <option value=1>Administración </option>
+                    <option value=2>Almacén</option>
+                    <option value=3>Casino</option>
+                    <option value=4>Cultivo-Alstroemeria</option>
+                    <option value=5>Cultivo-Clavel</option>
+                    <option value=6>Cultivo-Fillers</option>
+                    <option value=7>Cultivo-Hydrangea</option>
+                    <option value=8>Cultivo-Pompon</option>
+                    <option value=9>Cultivo-Rosa</option>
+                    <option value=10>Empaque</option>
+                    <option value=11>INV</option>
+                    <option value=12>Laboratorio</option>
+                    <option value=13>Mantenimiento</option>
+                    <option value=14>Mipe</option>
+                    <option value=15>Mirfe</option>
+                    <option value=16>Planta de sustratos</option>
+                    <option value=17>Poscosecha-Alstroemeria</option>
+                    <option value=18>Poscosecha-Clavel</option>
+                    <option value=19>Poscosecha-Fillers</option>
+                    <option value=20>Poscosecha-Hydrangea</option>
+                    <option value=21>Poscosecha-Pompon</option>
+                    <option value=22>Poscosecha-Rosa</option>
+                    <option value=23>Propagación </option>
+                    <option value=24>Rutas</option>
+                    <option value=25>Tinturados</option>
+                    <option value=26>Vigilancia</option>
+                </select>
+                <label>Nombre del area de trabajo</label><input type="text" name="NombreArea" id="NombreArea">
+                <label>Oficio habitual</label><input type="text" name="Labor" id="Labor">
+                <label>Tarea al momento del accidente</label><input type="text" name="TareaAccidente" id="TareaAccidente">
+                <label>Días de incapacidad</label><input type="number" name="DiasIT" id="DiasIT">
+                <label>Parte del cuerpo afectada</label>
+                    <select name="ParteCuerpo" id="ParteCuerpo">
+                    <option value=0>Seleccione</option>
+                    <optgroup label="Cabeza">
+                            <option value=1>Cabeza</option>
+                            <option value=2>Cara</option>
+                            <option value=3>Cuello</option>
+                            <option value=4>Oido(s)</option>
+                            <option value=5>Ojo(s)</option>
+                            <option value=6>Oreja(s)</option>
+                        </optgroup>
+                        <optgroup label="Miembros superiores">
+                            <option value=7>Brazo(s)</option>
+                            <option value=8>Codo(s)</option>
+                            <option value=9>Hombro(s)</option>
+                            <option value=10>Manos y Dedos de Manos</option>
+                        </optgroup>
+                        <optgroup label="Tronco">
+                            <option value=11>Abdomen</option>
+                            <option value=12>Espalda</option>
+                            <option value=13>Pecho-tórax</option>
+                        </optgroup>
+                        <optgroup label="Miembros inferiores">
+                            <option value=14>Cadera</option>
+                            <option value=15>Genitales</option>
+                            <option value=16>Gluteo(s)</option>
+                            <option value=17>Muslo(s)</option>
+                            <option value=18>Pie(s)</option>
+                            <option value=19>Pierna(s)</option>
+                            <option value=20>Rodilla(s)</option>
+                            <option value=21>Tobillo(s)</option>
+                        </optgroup>
+                        <optgroup label="Partes multiples">
+                            <option value=22>Partes multiples</option>
+                        </optgroup>
+                        <optgroup label="Piel y faneras">
+                            <option value=23>Piel y faneras</option>
+                        </optgroup>
+                        <optgroup label="Sistemico">
+                            <option value=24>Sistemico</option>
+                        </optgroup>
+                </select>
+                <label>Naturaleza de la lesión</label><select name="NaturalezaAccidente" id="NaturalezaAccidente">
+                    <option value=0>Seleccione</option>
+                    <option value=1>Amputación o enucleación</option>
+                    <option value=2>Asfixia, estrangulación, ahogamiento</option>
+                    <option value=3>Choque eléctrico, electrocución, quemadura eléctrica</option>
+                    <option value=4>Congelación, efectos de la exposición a bajas temperaturas</option>
+                    <option value=5>Contusión cerebral</option>
+                    <option value=6>Contusión, machacón, magulladura, traumatismo, atrición, hematoma, edema y equimosis traumáticos</option>
+                    <option value=7>Cortada, laceración, herida abierta, avulsión, sección, desprendimiento de las uñas</option>
+                    <option value=8>Cuerpo extraño en ojo</option>
+                    <option value=9>Dermatitis, inflamación de la piel, incluyendo pústulas, etc.  </option>
+                    <option value=10>Distensiones, desgarros (incluye lumbalgias por esfuerzo)</option>
+                    <option value=11>Efectos de las radiaciones, quemaduras solares </option>
+                    <option value=12>Envenenamiento (sistémico)</option>
+                    <option value=13>Fractura, fisura ósea</option>
+                    <option value=14>Hernias. Incluye hernias inguinales y no inguinales</option>
+                    <option value=15>Inflamación de vías respiratorias  (por agentes químicos)</option>
+                    <option value=16>Lesiones en ojos tales como rayones de córnea, heridas en cristalino</option>
+                    <option value=17>Luxación, esguince </option>
+                    <option value=18>Pérdida de la audición o su deterioro</option>
+                    <option value=19>Pinchazo</option>
+                    <option value=20>Politraumatismo</option>
+                    <option value=21>Quemadura  (química) incluye eritema </option>
+                    <option value=22>Quemadura (calórica) incluye eritema  </option>
+                    <option value=23>Reacción alergica</option>
+                    <option value=23>Vesículas  (ampollas)</option>
+                </select>
+                <label>Agente de la lesión</label><select name="AgenteAccidente" id="AgenteAccidente">
+                    <option value=0>Seleccione</option>
+                    <option value=1>Actividad deportiva</option>
+                    <option value=2>Animales (burro, caballo, mula, perro, etc)</option>
+                    <option value=3>Articulos de metal</option>
+                    <option value=4>Bandas transportadoras</option>
+                    <option value=5>Bicicletas</option>
+                    <option value=6>Bombas y generadores de energia.</option>
+                    <option value=7>Caída desde altura</option>
+                    <option value=8>Cajas, tabacos, tinas, barriles.</option>
+                    <option value=9>Combustibles y/o solventes</option>
+                    <option value=10>Cortinas de invernadero</option>
+                    <option value=11>Desespinadora</option>
+                    <option value=12>Electricidad</option>
+                    <option value=13>Equipos de oficina</option>
+                    <option value=14>Equipos de soldadura</option>
+                    <option value=15>Escaleras</option>
+                    <option value=16>Espina</option>
+                    <option value=17>Excavaciones</option>
+                    <option value=18>Fertilizantes</option>
+                    <option value=19>Flameadora</option>
+                    <option value=20>Guadaña</option>
+                    <option value=21>Herramientas  manuales no accionadas a motor</option>
+                    <option value=22>Herramientas manuales accionadas a motor </option>
+                    <option value=23>Hierros - alambres - tornillos</option>
+                    <option value=24>Insectos</option>
+                    <option value=25>Levantamiento de cargas</option>
+                    <option value=26>Locativo (locker, puerta, ventana, techo, etc)</option>
+                    <option value=27>Locativo invernadero (tutoraje, limatones, etc)</option>
+                    <option value=28>Madera</option>
+                    <option value=29>Malacates</option>
+                    <option value=30>Maquinas </option>
+                    <option value=31>Material particulado (cascarilla, cal, escoria, tierra, etc.)</option>
+                    <option value=32>Material vegetal diferente a espinas</option>
+                    <option value=33>Mobiliarios, muebles o adornos fijos, accesorios.</option>
+                    <option value=34>Motocultor</option>
+                    <option value=35>Otras sustancias químicas</option>
+                    <option value=36>Picadora</option>
+                    <option value=37>Piso (deslizante, humedo, desnivelado, etc)</option>
+                    <option value=38>Plaguicidas</option>
+                    <option value=39>Plataformas</option>
+                    <option value=40>Posturas inadecuadas</option>
+                    <option value=41>Productos alimenticios</option>
+                    <option value=42>Puntillas</option>
+                    <option value=43>Recipientes a presion</option>
+                    <option value=44>Reservorio</option>
+                    <option value=45>Residuos y basuras</option>
+                    <option value=46>Ruta empresa</option>
+                    <option value=47>Sierra</option>
+                    <option value=48>Termonebulizadora</option>
+                    <option value=49>Tijeras</option>
+                    <option value=50>Tractor</option>
+                    <option value=51>Transporte interno de flor y otros productos</option>
+                    <option value=52>Tubos de desagüe, alcantarillas, pozos.</option>
+                    <option value=53>Vallado</option>
+                    <option value=54>Zancos</option>
+                </select>
+                <label>Tipo de accidente</label><select name="TipoAccidente" id="TipoAccidente">
+                    <option value=0>Seleccione</option>
+                    <option value=1>Accidente de transito</option>
+                    <option value=2>Atrapamiento</option>
+                    <option value=3>Atropellamiento</option>
+                    <option value=4>Caída a diferente nivel</option>
+                    <option value=5>Caída al mismo nivel</option>
+                    <option value=6>Causado por animal o insecto</option>
+                    <option value=7>Causado por terceras personas</option>
+                    <option value=8>Contacto con electricidad</option>
+                    <option value=9>Contacto con fuego</option>
+                    <option value=10>Contacto con objetos calientes</option>
+                    <option value=11>Contacto con objetos cortantes y/o punzantes</option>
+                    <option value=12>Contacto con sustancias químicas</option>
+                    <option value=13>Explosión</option>
+                    <option value=14>Exposición a agentes biológicos (bacterias, hongos, etc.)</option>
+                    <option value=15>Exposición a altas o bajas temperaturas</option>
+                    <option value=16>Exposición a presiones anormales</option>
+                    <option value=17>Exposición a radiaciones</option>
+                    <option value=18>Exposición a ruido</option>
+                    <option value=19>Exposición a vibraciones</option>
+                    <option value=20>Fricción o raspadura</option>
+                    <option value=21>Golpeado contra</option>
+                    <option value=22>Golpeado por</option>
+                    <option value=23>Inhalación de vapores, gases, humos metálicos, nieblas, rocios y/o polvos</option>
+                    <option value=24>Inmersión</option>
+                    <option value=25>Intoxicación por alimentos</option>
+                    <option value=26>Proyección de particulas</option>
+                    <option value=27>Sobre tensión mental y psicológica</option>
+                    <option value=28>Sobreesfuerzo, esfuerzo excesivo o falso movimiento</option>
+                </select>
+                <label>Peligro</label><select name="PeligroAccidente" id="PeligroAccidente">
+                    <option value=0>Seleccione</option>
+                    <option value=1>Biomecánico</option>
+                    <option value=2>Biológico</option>
+                    <option value=3>Eléctrico</option>
+                    <option value=4>Físico</option>
+                    <option value=5>Locatívo</option>
+                    <option value=6>Mecánico</option>
+                    <option value=7>Psicosocial</option>
+                    <option value=8>Público</option>
+                    <option value=9>Químico</option>
+                    <option value=10>Trabajo en alturas</option>
+                    <option value=11>Transito</option>
+                </select>
+                <label>Origen del accidente</label><select name="OrigenAccidente" id="OrigenAccidente">
+                    <option value=0>Seleccione</option>
+                    <option value=1>Violencia</option>
+                    <option value=2>Deportivo</option>
+                    <option value=3>In itinere</option>
+                    <option value=4>Propio del trabajo no relacionado con la tarea habitual</option>
+                    <option value=5>Propios del trabajo</option>
+                    <option value=6>Recreativo o cultural</option>
+                    <option value=7>Transito</option>
+                </select>
+                <label>Causa del accidente</label><select name="CausaAccidente" id="CausaAccidente">
+                    <option value=0>Seleccione</option>
+                    <option value=1>Acto Inseguro</option>
+                    <option value=2>Condición insegura</option>
+                    <option value=3>Acto y condición insegura</option>
+                </select>
+                <label>Accidente grave</label><select name="AccidenteGrave" id="AccidenteGrave">
+                    <option value=0>Seleccione</option>
+                    <option value=1>SI</option>
+                    <option value=2>NO</option>
+                </select>
+                <label>Fecha de reporte a la ARL</label><input type="datetime" name="FechaReporteAccidente" id="FechaReporteAccidente">
+                <label>Descripción del accidente</label><textarea name="DescripcionAccidente" id="DescripcionAccidente" rows="1" cols="50">Detalle aquí</textarea>
+                <label>Observaciones</label><textarea name="ObservacionAccidente" id="ObservacionAccidente" rows="1" cols="50">Detalle aquí</textarea>
+        </div>
+
+        
+        <h2>Investigación del accidente</h2>
+            <div class="ContenedorSub">    
+                    <label>Accidente Investigado</label><select name="AccidenteInvestigado" id="AccidenteInvestigado">
+                        <option value=0>Seleccione</option>
+                        <option value=1>SI</option>
+                        <option value=2>NO</option>
+                    </select>
+                    <label>Planes de acción propuestos</label><input type="number" name="PlanesPropuestosAT" id="PlanesPropuestosAT">
+                    <label>Planes de acción ejecutados</label><input type="number" name="PlanesEjecutadosAT" id="PlanesEjecutadosAT">
+                    <label>Evidencia Cierre De Planes Acción</label><select name="CierrePlanes" id="CierrePlanes">
+                        <option value=0>Seleccione</option>
+                        <option value=1>SI</option>
+                        <option value=2>NO</option>
+                    </select>
+                    <label>Furat (Impreso)</label><select name="FuratImpreso" id="FuratImpreso">
+                        <option value=0>Seleccione</option>
+                        <option value=1>SI</option>
+                        <option value=2>NO</option>
+                    </select>
+                    <label>Formato De Investigación</label><select name="FormatoInvestigacion" id="FormatoInvestigacion">
+                        <option value=0>Seleccione</option>
+                        <option value=1>SI</option>
+                        <option value=2>NO</option>
+                    </select>
+                    <label>Versión Del Accidentado</label><select name="VersionAccidentado" id="VersionAccidentado">
+                        <option value=0>Seleccione</option>
+                        <option value=1>SI</option>
+                        <option value=2>NO</option>
+                    </select>
+                    <label>Versión De Testigos</label><select name="VersionTestigo" id="VersionTestigo">
+                        <option value=0>Seleccione</option>
+                        <option value=1>SI</option>
+                        <option value=2>NO</option>
+                    </select>
+                    <label>"Analisis De Causa (Arbol De Causas, Espina De Pescado, 5 Por Que, Otro) "</label><select name="AnalisisCausaAT" id="AnalisisCausaAT">
+                        <option value=0>Seleccione</option>
+                        <option value=1>SI</option>
+                        <option value=2>NO</option>
+                    </select>
+                    <label>Evidencia Fotografica</label><select name="EvidenciaAT" id="EvidenciaAT">
+                        <option value=0>Seleccione</option>
+                        <option value=1>SI</option>
+                        <option value=2>NO</option>
+                    </select>
+                    <label>Lección Aprendida</label><select name="LeccionAT" id="LeccionAT">
+                        <option value=0>Seleccione</option>
+                        <option value=1>SI</option>
+                        <option value=2>NO</option>
+                    </select>
+                    <label>Divulgación Lección Aprendida</label><select name="DivulgacionAT" id="DivulgacionAT">
+                        <option value=0>Seleccione</option>
+                        <option value=1>SI</option>
+                        <option value=2>NO</option>
+                    </select>
+            </div>
+            
+            <button mat-stroked-button color="Accent" type="submit" onclick="pulsar()"> Enviar </button>
+            
+    </form>
+
+</body>
+</html>
